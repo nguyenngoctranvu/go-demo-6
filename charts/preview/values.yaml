@@ -21,3 +21,11 @@ preview:
     tag:
     pullPolicy: IfNotPresent
   probePath: /demo/hello?health=true
+
+db: 
+  enabled: false
+
+preview-db:
+  presistence:
+    enabled: false
+  userPassword: false
