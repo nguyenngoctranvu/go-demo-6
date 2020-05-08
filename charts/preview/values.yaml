@@ -28,3 +28,4 @@ db:
 preview-db:
   presistence:
     enabled: false
+  userPassword: false
