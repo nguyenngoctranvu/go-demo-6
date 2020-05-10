@@ -65,3 +65,8 @@ unittest:
 	test --run UnitTest -v
 
 VERSION := 3.0.0
+
+functest:
+	CGO_ENABLED=$(CGO_ENABLED) $(GO) \
+	test -test.v --run FunctionalTest \
+	--cover
