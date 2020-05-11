@@ -2,7 +2,10 @@ buildPack: go
 pipelineConfig:
   env:
   - name: CODECOV_TOKEN
-    value: e08406b9-530c-49c3-aec3-211c10c6bfe2
+    valueFrom:
+      secretKeyRef:
+        key: token
+        name: codecov
   pipelines:
     pullRequest:
       build:
