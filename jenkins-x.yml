@@ -1,5 +1,8 @@
 buildPack: go
 pipelineConfig:
+  env:
+  - name: CODECOV_TOKEN
+    value: e08406b9-530c-49c3-aec3-211c10c6bfe2
   pipelines:
     pullRequest:
       build:
@@ -7,6 +10,10 @@ pipelineConfig:
         # This was modified
         - name: unit-tests
           command: make unittest
+        - name: code-coverage
+          command: codecov.sh
+          agent:
+            image: vfarcic/codecov
       promote:
         steps:
         # This is new
