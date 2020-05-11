@@ -3,8 +3,8 @@
 # Declare variables to be passed into your templates.
 replicaCount: 3
 image:
-  repository: draft
-  tag: dev
+  repository: gcr.io/k8s-project-273408/go-demo-6
+  tag: 3.0.12
   pullPolicy: IfNotPresent
 
 # define environment variables here as a map of key: value
